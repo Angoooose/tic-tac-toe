@@ -1,0 +1,129 @@
+#heading {
+    text-align: center;
+}
+
+.Board {
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 24px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.Board button[id="square1"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square1"]:hover {
+    background: gray;
+}
+
+.Board button[id="square2"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square2"]:hover {
+    background: gray;
+}
+
+.Board button[id="square3"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square3"]:hover {
+    background: gray;
+}
+
+.Board button[id="square4"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square4"]:hover {
+    background: gray;
+}
+
+.Board button[id="square5"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square5"]:hover {
+    background: gray;
+}
+
+.Board button[id="square6"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square6"]:hover {
+    background: gray;
+}
+
+.Board button[id="square7"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square7"]:hover {
+    background: gray;
+}
+
+.Board button[id="square8"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square8"]:hover {
+    background: gray;
+}
+
+.Board button[id="square9"] {
+    width: 133.33px;
+    height: 133.33px;
+    padding: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.Board button[id="square9"]:hover {
+    background: gray;
+}
