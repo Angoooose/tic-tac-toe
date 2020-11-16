@@ -1,129 +1,32 @@
-#heading {
+.board {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin: 16px 8px;
+    padding: 16px 16px;
     text-align: center;
+    width: -webkit-fill-available;
 }
 
-.Board {
-    width: 400px;
-    height: 400px;
-    padding: 40px;
-    border-radius: 24px;
-    border: 2px solid black;
-    margin: auto;
+.board-square { 
+    height: 200px;
+    font-size: 64px;
+    padding: 16px;
+    width: 100px;
 }
 
-.Board button[id="square1"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
+.clickable {
+    cursor: pointer;
 }
 
-.Board button[id="square1"]:hover {
-    background: gray;
+.clickable:hover {
+    background-color: var(--bg-secondary-dark);
 }
 
-.Board button[id="square2"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
+.c1, .c2 {
+    border-right: 4px solid var(--bg-secondary);
+    stroke-linecap: round;
 }
 
-.Board button[id="square2"]:hover {
-    background: gray;
-}
-
-.Board button[id="square3"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square3"]:hover {
-    background: gray;
-}
-
-.Board button[id="square4"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square4"]:hover {
-    background: gray;
-}
-
-.Board button[id="square5"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square5"]:hover {
-    background: gray;
-}
-
-.Board button[id="square6"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square6"]:hover {
-    background: gray;
-}
-
-.Board button[id="square7"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square7"]:hover {
-    background: gray;
-}
-
-.Board button[id="square8"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square8"]:hover {
-    background: gray;
-}
-
-.Board button[id="square9"] {
-    width: 133.33px;
-    height: 133.33px;
-    padding: 40px;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 50px;
-}
-
-.Board button[id="square9"]:hover {
-    background: gray;
+.r1, .r2 {
+    border-bottom: 4px solid var(--bg-secondary);
 }

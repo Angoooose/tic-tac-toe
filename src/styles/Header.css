@@ -1,0 +1,6 @@
+.header {
+    background-color: var(--bg-grey-800);
+    font-size: 32px;
+    margin: 32px 0px;
+    text-align: center;
+}
