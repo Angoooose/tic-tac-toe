@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react';
 import Header from './Header.jsx';
 import Board from './Board.jsx';
 import Notification from './Notification.jsx';
+import CPU_Logic from '../logic/CPU-Logic.jsx';
 
 function App() {
   const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
   const [isPlayerTurn, setIsPlayerTurn] = useState(true);
+  const [isCpuTurn, setIsCpuTurn] = useState(false);
   const [isGameComplete, setIsGameComplete] = useState(false);
   const [isGameRestarting, setIsGameRestarting] = useState(false);
   const [winMessage, setWinMessage] = useState('');
@@ -27,7 +29,7 @@ function App() {
       setWinMessage('Its a draw!');
     } else {
       if (!isPlayerTurn) {
-        cpuTurn(board);
+        startCpuTurn();
       }
     }
   }, [board]);
@@ -41,6 +43,7 @@ function App() {
   function restartGame() {
     setBoard(['', '', '', '', '', '', '', '', '']);
     setIsPlayerTurn(true);
+    setIsCpuTurn(false);
     setIsGameComplete(false);
     setIsGameRestarting(false);
   }
@@ -54,21 +57,8 @@ function App() {
     }
   }
 
-  function cpuTurn(board) {
-    let selectedSquare;
-
-    board.forEach((square, i) => {
-      if (square === '' && !selectedSquare) {
-        selectedSquare = i;
-      }
-    });
-
-    if (selectedSquare) {
-      const updatedBoard = [...board];
-      updatedBoard[selectedSquare] = 'o';
-      setBoard(updatedBoard);
-      setIsPlayerTurn(true);
-    }
+  function startCpuTurn() {
+    setIsCpuTurn(true);
   }
 
   function getIsWin() {
@@ -87,7 +77,7 @@ function App() {
     if (board[1] === board[4] && board[1] === board[7]) {
       if (board[1] !== '' && board[4] !== '' && board[7] !== '') return checkCell(1, board);
     }
-    if (board[2] === board[5] && board[2] === board[8] ) {
+    if (board[2] === board[5] && board[2] === board[8]) {
       if (board[2] !== '' && board[5] !== '' && board[8] !== '') return checkCell(2, board);
     }
     if (board[0] === board[4] && board[0] === board[8]) {
@@ -142,6 +132,7 @@ function App() {
       <Header />
       <Board board={board} handleClick={(squareId) => handleBoardClick(squareId)} isPlayerTurn={isPlayerTurn} isGameComplete={isGameComplete} />
       <Notification isGameComplete={isGameComplete} winMessage={winMessage} setIsGameRestarting={setIsGameRestarting} />
+      <CPU_Logic board={board} setBoard={setBoard} setIsPlayerTurn={setIsPlayerTurn} isCpuTurn={isCpuTurn} setIsCpuTurn={setIsCpuTurn} isGameComplete={isGameComplete} />
     </div>
   );
 }
