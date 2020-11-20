@@ -2,5 +2,18 @@
     background-color: var(--bg-grey-800);
     font-size: 32px;
     margin: 32px 0px;
-    text-align: center;
+}
+
+.header-img {
+    float: right;
+    height: 40px;
+    transform: scale(1);
+    transition: 250ms;
+    width: 40px;
+}
+
+.header-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 250ms;
 }
