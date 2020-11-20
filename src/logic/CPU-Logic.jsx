@@ -39,54 +39,24 @@ export default function CPU_Logic(props) {
     function checkForWinningMove(board) {
         let winningMove;
 
-        if (board[0] === 'o' && board[1] === 'o' && board[2] === '') {
-            winningMove = 2;
-        } else if (board[3] === 'o' && board[4] === 'o' && board[5] === '') {
-            winningMove = 5;
-        } else if (board[6] === 'o' && board[7] === 'o' && board[8] === '') {
-            winningMove = 8;
-        } else if (board[1] === 'o' && board[2] === 'o' && board[0] === '') {
+        if ((board[1] === 'o' && board[2] === 'o' && board[0] === '') || (board[6] === 'o' && board[3] === 'o' && board[0] === '') || (board[8] === 'o' && board[4] === 'o' && board[0] === '')) {
             winningMove = 0;
-        } else if (board[4] === 'o' && board[5] === 'o' && board[3] === '') {
-            winningMove = 3;
-        } else if (board[7] === 'o' && board[8] === 'o' && board[6] === '') {
-            winningMove = 6;
-        } else if (board[0] === 'o' && board[2] === 'o' && board[1] === '') {
+        } else if ((board[0] === 'o' && board[2] === 'o' && board[1] === '') || (board[7] === 'o' && board[4] === 'o' && board[1] === '')) {
             winningMove = 1;
-        } else if (board[3] === 'o' && board[5] === 'o' && board[4] === '') {
-            winningMove = 4;
-        } else if (board[6] === 'o' && board[8] === 'o' && board[7] === '') {
-            winningMove = 7;
-        } else if (board[0] === 'o' && board[3] === 'o' && board[6] === '') {
-            winningMove = 6;
-        } else if (board[1] === 'o' && board[4] === 'o' && board[7] === '') {
-            winningMove = 7;
-        } else if (board[2] === 'o' && board[5] === 'o' && board[8] === '') {
-            winningMove = 8;
-        } else if (board[6] === 'o' && board[3] === 'o' && board[0] === '') {
-            winningMove = 0;
-        } else if (board[7] === 'o' && board[4] === 'o' && board[1] === '') {
-            winningMove = 1;
-        } else if (board[8] === 'o' && board[5] === 'o' && board[2] === '') {
+        } else if ((board[0] === 'o' && board[1] === 'o' && board[2] === '') || (board[8] === 'o' && board[5] === 'o' && board[2] === '') || (board[6] === 'o' && board[4] === 'o' && board[2] === '')) {
             winningMove = 2;
-        } else if (board[6] === 'o' && board[0] === 'o' && board[3] === '') {
+        } else if ((board[4] === 'o' && board[5] === 'o' && board[3] === '') || (board[6] === 'o' && board[0] === 'o' && board[3] === '')) {
             winningMove = 3;
-        } else if (board[7] === 'o' && board[1] === 'o' && board[4] === '') {
+        } else if ((board[3] === 'o' && board[5] === 'o' && board[4] === '') || (board[7] === 'o' && board[1] === 'o' && board[4] === '') || (board[0] === 'o' && board[8] === 'o' && board[4] === '') || (board[6] === 'o' && board[2] === 'o' && board[4] === '')) {
             winningMove = 4;
-        } else if (board[8] === 'o' && board[2] === 'o' && board[5] === '') {
+        } else if ((board[3] === 'o' && board[4] === 'o' && board[5] === '') || (board[8] === 'o' && board[2] === 'o' && board[5] === '')) {
             winningMove = 5;
-        } else if (board[0] === 'o' && board[4] === 'o' && board[8] === '') {
-            winningMove = 8;
-        } else if (board[8] === 'o' && board[4] === 'o' && board[0] === '') {
-            winningMove = 0;
-        } else if (board[6] === 'o' && board[4] === 'o' && board[2] === '') {
-            winningMove = 2;
-        } else if (board[2] === 'o' && board[4] === 'o' && board[6] === '') {
+        } else if ((board[7] === 'o' && board[8] === 'o' && board[6] === '') || (board[0] === 'o' && board[3] === 'o' && board[6] === '') || (board[2] === 'o' && board[4] === 'o' && board[6] === '')) {
             winningMove = 6;
-        } else if (board[0] === 'o' && board[8] === 'o' && board[4] === '') {
-            winningMove = 4;
-        } else if (board[6] === 'o' && board[2] === 'o' && board[4] === '') {
-            winningMove = 4;
+        } else if ((board[6] === 'o' && board[8] === 'o' && board[7] === '') || (board[1] === 'o' && board[4] === 'o' && board[7] === '')) {
+            winningMove = 7;
+        } else if ((board[6] === 'o' && board[7] === 'o' && board[8] === '') || (board[2] === 'o' && board[5] === 'o' && board[8] === '') || (board[0] === 'o' && board[4] === 'o' && board[8] === '')) {
+            winningMove = 8;
         } else {
             return checkForDefensiveMove(board);
         }
@@ -97,62 +67,32 @@ export default function CPU_Logic(props) {
     }
 
     function checkForDefensiveMove(board) {
-        let selectedSquare;
+        let defensiveMove;
 
-        if (board[0] === 'x' && board[1] === 'x' && board[2] === '') {
-            selectedSquare = 2;
-        } else if (board[3] === 'x' && board[4] === 'x' && board[5] === '') {
-            selectedSquare = 5;
-        } else if (board[6] === 'x' && board[7] === 'x' && board[8] === '') {
-            selectedSquare = 8;
-        } else if (board[1] === 'x' && board[2] === 'x' && board[0] === '') {
-            selectedSquare = 0;
-        } else if (board[4] === 'x' && board[5] === 'x' && board[3] === '') {
-            selectedSquare = 3;
-        } else if (board[7] === 'x' && board[8] === 'x' && board[6] === '') {
-            selectedSquare = 6;
-        } else if (board[0] === 'x' && board[2] === 'x' && board[1] === '') {
-            selectedSquare = 1;
-        } else if (board[3] === 'x' && board[5] === 'x' && board[4] === '') {
-            selectedSquare = 4;
-        } else if (board[6] === 'x' && board[8] === 'x' && board[7] === '') {
-            selectedSquare = 7;
-        } else if (board[0] === 'x' && board[3] === 'x' && board[6] === '') {
-            selectedSquare = 6;
-        } else if (board[1] === 'x' && board[4] === 'x' && board[7] === '') {
-            selectedSquare = 7;
-        } else if (board[2] === 'x' && board[5] === 'x' && board[8] === '') {
-            selectedSquare = 8;
-        } else if (board[6] === 'x' && board[3] === 'x' && board[0] === '') {
-            selectedSquare = 0;
-        } else if (board[7] === 'x' && board[4] === 'x' && board[1] === '') {
-            selectedSquare = 1;
-        } else if (board[8] === 'x' && board[5] === 'x' && board[2] === '') {
-            selectedSquare = 2;
-        } else if (board[6] === 'x' && board[0] === 'x' && board[3] === '') {
-            selectedSquare = 3;
-        } else if (board[7] === 'x' && board[1] === 'x' && board[4] === '') {
-            selectedSquare = 4;
-        } else if (board[8] === 'x' && board[2] === 'x' && board[5] === '') {
-            selectedSquare = 5;
-        } else if (board[0] === 'x' && board[4] === 'x' && board[8] === '') {
-            selectedSquare = 8;
-        } else if (board[8] === 'x' && board[4] === 'x' && board[0] === '') {
-            selectedSquare = 0;
-        } else if (board[6] === 'x' && board[4] === 'x' && board[2] === '') {
-            selectedSquare = 2;
-        } else if (board[2] === 'x' && board[4] === 'x' && board[6] === '') {
-            selectedSquare = 6;
-        } else if (board[0] === 'x' && board[8] === 'x' && board[4] === '') {
-            selectedSquare = 4;
-        } else if (board[6] === 'x' && board[2] === 'x' && board[4] === '') {
-            selectedSquare = 4;
+        if ((board[1] === 'x' && board[2] === 'x' && board[0] === '') || (board[6] === 'x' && board[3] === 'x' && board[0] === '') || (board[8] === 'x' && board[4] === 'x' && board[0] === '')) {
+            defensiveMove = 0;
+        } else if ((board[0] === 'x' && board[2] === 'x' && board[1] === '') || (board[7] === 'x' && board[4] === 'x' && board[1] === '')) {
+            defensiveMove = 1;
+        } else if ((board[0] === 'x' && board[1] === 'x' && board[2] === '') || (board[8] === 'x' && board[5] === 'x' && board[2] === '') || (board[6] === 'x' && board[4] === 'x' && board[2] === '')) {
+            defensiveMove = 2;
+        } else if ((board[4] === 'x' && board[5] === 'x' && board[3] === '') || (board[6] === 'x' && board[0] === 'x' && board[3] === '')) {
+            defensiveMove = 3;
+        } else if ((board[3] === 'x' && board[5] === 'x' && board[4] === '') || (board[7] === 'x' && board[1] === 'x' && board[4] === '') || (board[0] === 'x' && board[8] === 'x' && board[4] === '') || (board[6] === 'x' && board[2] === 'x' && board[4] === '')) {
+            defensiveMove = 4;
+        } else if ((board[3] === 'x' && board[4] === 'x' && board[5] === '') || (board[8] === 'x' && board[2] === 'x' && board[5] === '')) {
+            defensiveMove = 5;
+        } else if ((board[7] === 'x' && board[8] === 'x' && board[6] === '') || (board[0] === 'x' && board[3] === 'x' && board[6] === '') || (board[2] === 'x' && board[4] === 'x' && board[6] === '')) {
+            defensiveMove = 6;
+        } else if ((board[6] === 'x' && board[8] === 'x' && board[7] === '') || (board[1] === 'x' && board[4] === 'x' && board[7] === '')) {
+            defensiveMove = 7;
+        } else if ((board[6] === 'x' && board[7] === 'x' && board[8] === '') || (board[2] === 'x' && board[5] === 'x' && board[8] === '') || (board[0] === 'x' && board[4] === 'x' && board[8] === '')) {
+            defensiveMove = 8;
         } else {
             return findOptimalWinPath(board);
         }
 
-        if (selectedSquare || selectedSquare === 0) {
-            return selectedSquare;
+        if (defensiveMove || defensiveMove === 0) {
+            return defensiveMove;
         }
     }
 
