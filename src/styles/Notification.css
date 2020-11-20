@@ -6,13 +6,14 @@
     height: 30%;
     position: relative;
     top: 30%;
+    transform: scale(1);
     width: 30%;
 }
 
 .button:hover {
     background-color: var(--bg-secondary-dark);
     cursor: pointer;
-    width: 35%;
+    transform: scale(1.1);
 }
 
 .message {
@@ -26,13 +27,14 @@
     background-color: var(--bg-grey-800);
     border-radius: 24px;
     display: none;
+    font-size: 20px;
     height: 100px;
     left: 50%;
     position: absolute;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 400px;
 }
 
 .visable {
