@@ -9,7 +9,7 @@ There are two methods of using the tic-tac-toe app. You can either use it from [
 
 **Method 1 (Use its website):**
 
-    1. Its website URL is: https://tic-tac-toe-angoose.herokuapp.com/. Navigate here in your browser to use the app.
+1. Its website URL is: https://tic-tac-toe-angoose.herokuapp.com/. Navigate here in your browser to use the app.
 
 **Method 2 (Run it locally):**
 
