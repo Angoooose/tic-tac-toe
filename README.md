@@ -2,7 +2,7 @@
 A web application for playing tic-tac-toe against a computer opponent (CPU). Built using React.
 
 # Requirements
-- NodeJS and NPM (Only needed for method 2)
+- NodeJS and NPM
 
 # To use
 1. Clone the repository to your local machine using the following command:
