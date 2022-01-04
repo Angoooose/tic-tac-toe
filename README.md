@@ -1,3 +1,7 @@
+# Notice
+
+This is an older repository, you can find an improved version of this web application [here](https://github.com/Angoooose/tic-tac-toe-v2/). Thanks.
+
 # tic-tac-toe
 A web application for playing tic-tac-toe against a computer opponent (CPU). Built using React.
 
